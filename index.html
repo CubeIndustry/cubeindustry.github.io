@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubeIndustry</title>
+    <link rel="icon" href="https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Pictures/Icons/icon.png">
+    <meta property="og:title" content="CubeIndustry">
+    <meta property="og:description" content="Web-Design • Texture creation • 3D-Modeling">
+    <meta property="og:image" content="https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Pictures/Icons/icon.png">
+    <meta property="og:url" content="https://cubeindustry.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CubeIndustry">
+    <meta name="twitter:description" content="Web-Design • Texture creation • 3D-Modeling">
+    <meta name="twitter:image" content="https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Pictures/Icons/icon.png"
+    <meta name="twitter:url" content="https://cubeindustry.github.io/">
+    <meta name="author" content="CubeBuilder">
+    <meta name="keywords" content="CubeIndustry">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="copyright" content="CubeIndustry">
+    <meta name="distribution" content="internal">
+    <meta name="rating" content="general">
+    <meta name="language" content="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+      body{
+        background-color: #f1f1f1;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      header{
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .icon{
+        width: 75px;
+        height: 75px;
+        margin: 10px;
+        border-radius: 10px;
+      }
+      #left{
+        display: flex;
+        align-items: center;
+      }
+      #right{
+        position: relative;
+        top: 0;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+      }
+      #right:hover{
+        background-color: #f1f1f1;
+        
+      }
+      .minimage{
+        height: 20px;
+        width: 20px;
+        margin: 3px;
+      }
+      .section{
+        background-color: #ffffff;
+        border: 3px solid #333;
+        border-radius: 10px;
+        width: 150px;
+        height: auto;
+        margin: 20px;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .section:hover{
+        background-color: #d3d3d3;
+      }
+      .sectionIcon{
+        height: 50px;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="left">
+        <img src="https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Pictures/Icons/icon.png" alt="Icon" class="icon">
+        <h1>CubeIndustry</h1>
+      </div>
+      <div id="right" onclick="window.location.href='https://cubeindustry.github.io/help/'">
+        <img src="https://cubeindustry.github.io/cloud/assets/icons/Info.png" class="minimage">
+        <p>help</p>
+      </div>
+    </header>
+    <div id="content">
+      <div id="cloud" class="section" onclick="window.location.href='https://cubeindustry.github.io/cloud/'">
+        <img src="https://cubeindustry.github.io/cloud/assets/icons/cloud.png" alt="Cloud" class="sectionIcon">
+        <h3>Cloud</h3>
+        <p>Have you ever asked where we store our pictures?</p>
+      </div>
+    </div>
+  </body>
+</html>
