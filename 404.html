@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>error</title>
+    <style>
+      body {
+        background-color: #ffffff;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .error {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 15%;
+      }
+
+      h1, p {
+        color: #33CCCC;
+        text-align: center;
+      }
+
+      a {
+        color: #FF5B5B;
+        text-decoration: none;
+      }
+
+      .icon {
+        width: 200px;
+        height: 200px;
+        margin: 30px;
+      }
+
+      p {
+        position: absolute;
+        bottom: 0;
+        font-size: 10px;
+        margin-left: 8%;
+      }
+
+      @media (max-width: 600px) {
+        .error {
+          padding-top: 20%;
+        }
+
+        h1 {
+          font-size: 1.2em;
+          margin: 0 10px;
+        }
+
+        .icon {
+          width: 150px;
+          height: 150px;
+        }
+
+        p {
+          font-size: 10px;
+          margin-left: 5%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error">
+      <img src="https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Gifs/Error.gif" alt="error" class="icon">
+      <h1>Irgendwas ist schiefgelaufen.<br>Wir bringen dich gleich zurück zum Anfang. Habe bitte noch einen Moment Geduld. <br><br>Wenn du schon das zweite Mal hier bist, kannst du ja dieses <a href="https://dinorunner.com/de/">Spiel</a> ausprobieren.</h1>
+      <script>
+        setTimeout(function() {
+            window.location.href = 'https://cubeindustry.github.io';
+        }, 30000);
+      </script>
+    </div>
+    <center>
+      <p>Du wirst in 30 Sekunden nach Anzeigen des Fehlers wieder zurück zum Anfang gebracht. Die Sanduhr dreht sich alle 4 Sekunden. Wie oft wird sich die Sanduhr drehen, bis du wieder zurück kommst.<br><br>
+      Schicke die Lösung mit dem Rechnungsweg an <a href="mailto:CubeBuilder@web.de">CubeBuilder@web.de</a> und erwarte eine kleine Belohnung.</p>
+    </center>
+  </body>
+</html>
