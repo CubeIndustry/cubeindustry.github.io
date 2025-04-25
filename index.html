@@ -1,322 +1,265 @@
 <!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CubeIndustry</title>
-    <link rel="icon" href="icon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="icon.ico" type="image/x-icon">
-    <link rel="mask-icon" href="icon.svg" color="0E1525">
-    <meta property="og:title" content="CubeIndustry"/>
-    <meta property="og:description" content="Welcome to CubeIndustry!"/>
-    <meta property="og:image" content="icon.ico"/>
-    <meta name="theme-color" content="#1A2130" />
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://cubeindustry.github.io/"/>
-    <meta name="google-site-verification" content="y0Z0T9zNieThozXqqhgv2lu-BpmQjEstHXPqsKs6kXE" />
-    <meta name="msvalidate.01" content="B0C26F4D1B66A45415BFCFD63E3B380F" />
-    <meta name="yandex-verification" content="24edaaba993f55da" />
-    <style>
-      * {
-        margin:0px;
-        padding:0px;
-        box-sizing:border-box;
-        font-family: sans-serif;
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CubeIndustry</title>
+  <link rel="icon" href="https://cubeindustry.github.io/icon.ico" type="image/png">
+  <link rel="apple-touch-icon" href="https://cubeindustry.github.io/icon.ico">
+  <link rel="mask-icon" href="https://cubeindustry.github.io/icon.svg" color="#000000">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="description" content="Welcome to CubeIndustry.">
+  <meta name="keywords" content="CubeIndustry, Cube, Industry, Cube Industry, Cube Industry Website">
+  <meta property="og:title" content="CubeIndustry" />
+  <meta property="og:description" content="Welcome to CubeIndustry!" />
+  <meta property="og:image" content="icon.ico" />
+  <meta name="theme-color" content="#1A2130" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cubeindustry.github.io/" />
+  <meta name="google-site-verification" content="y0Z0T9zNieThozXqqhgv2lu-BpmQjEstHXPqsKs6kXE" />
+  <meta name="msvalidate.01" content="B0C26F4D1B66A45415BFCFD63E3B380F" />
+  <meta name="yandex-verification" content="24edaaba993f55da" />
+  <style>
+    * {
+      overflow: hidden;
+      overflow-y: scroll;
+      user-select: none;
+    }
+
+    body {
+      background-color: dimgray;
+      color: #DCDAC6;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(to right, #000000, dimgray);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 20px);
+      height: 70px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
+
+    header img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    header h1 {
+      color: #DCDAC6;
+      margin: 0;
+      font-size: 24px;
+    }
+
+    #nav {
+      position: absolute;
+      top: 35px;
+      left: 0;
+      width: calc(100% - 20px);
+      height: 35px;
+      background: linear-gradient(to right, #000000, dimgray);
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      transition: 0.5s ease;
+    }
+
+    #nav.open {
+      top: 90px;
+    }
+
+    #nav a {
+      color: #DCDAC6;
+      text-decoration: none;
+      font-size: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      margin: 0 10px 10px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #opener {
+      position: absolute;
+      top: 90px;
+      left: 0;
+      width: 50px;
+      height: 25px;
+      background-color: #000000;
+      border-bottom-right-radius: 10px;
+      z-index: 15;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      transition: 0.5s ease;
+    }
+
+    #opener.open {
+      top: 145px;
+    }
+
+    main{
+      position: absolute;
+      top: 170px;
+      left: 0;
+      padding: 10px;
+      width: calc(100% - 20px);
+      height: auto;
+    }
+    #links a, #services a{
+      color: #DCDAC6;
+      background-color: grey;
+      text-decoration: none;
+      font-size: 10px;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 10px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      padding: 15px 20px;
+    }
+    #links a i, #services a i{
+      margin-right: 5px;
+    }
+    #linkDC{
+      color: #5865F2;
+    }
+    #linkYT{
+      color: #FF0000;
+    }
+    #linkTV{
+      color: #974DF7;
+    }
+    #linkOD{
+      color: darkseagreen;
+    }
+    #linkRD{
+      color: indianred;
+    }
+    #linkPA{
+      color: saddlebrown;
+    }
+    #linkKB{
+      color: lightblue;
+    }
+    #contact{
+      background: gray;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    #contact a{
+      color: #DCDAC6;
+      text-decoration: none;
+    }
+    #contact a:hover{
+      color: #DCDAC6;
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      #nav a {
+        font-size: 8px;
       }
-      body {
-        background-color: #0E1525;
-        color: #fcfcfc;
-      }
-      #sidebar {
-        position:absolute;
-        top:0px;
-        right:-200px;
-        width:200px;
-        height:100%;
-        background:#191F2D;
-        transition:all 300ms linear;
-      }
-      #sidebar.active {
-        right:0px;
-      }
-      #sidebar .toggle-btn {
-        position:absolute;
-        right:220px;
-        top:10px;
-        cursor: pointer;
-        
-      }
-      #sidebar .toggle-btn span {
-        display:block;
-        width:30px;
-        height:5px;
-        background:#fcfcfc;
-        margin:5px 0px;
-        cursor:pointer;
-      }
-      #sidebar div.list div.item {
-        padding:15px 10px;
-        border-bottom:1px solid #444;
-        color:#fcfcfc;
-        cursor:pointer;
-        text-transform:uppercase;
-        font-size:15px;
-      }
-      .item:hover {
-        background-color: #151C2B;
-      }
-      #head{
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #1A2130;
-        width: 100%;
-        display: flex;
-        padding: 15px;
-        align-items: center;
-        z-index: -1;
-      }
-      #head h3{
-        background-color: #1A2130;
-        color: #fcfcfc;
-      }
-      #main{
-        padding: 10px;
-        margin-top: 50px;
-        transition: 0.3s;
-      }
-      #links{
-        padding: 10px;
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        transition:all 300ms linear;
-      }
-      #servicelist{
-        padding: 10px;
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        transition:all 300ms linear;
-      }
-      .container{
-        flex-grow: 1;
-        flex-basis: 200;
-        margin: 10px;
-      }
-      .sidebar-open #main{
-        margin-right: 200px;
-      }
-      #bewerbung{
-        display: grid;
-        place-items: center;
-      }
-    </style>
-    <script>
-      function toggleSidebar() {
-        document.getElementById("sidebar").classList.toggle("active");
-        document.body.classList.toggle("sidebar-open"); 
-      }
-    </script>
-  </head>
-  <body>
-    <div id="sidebar">
-      <div class="toggle-btn" onclick="toggleSidebar()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="list">
-        <div class="item" onclick="window.location.href = '#head'">Home</div>
-        <div class="item" onclick="window.location.href = '#contact'">Kontakt</div>
-        <div class="item" onclick="window.location.href = '#services'">Service</div>
-        <div class="item" onclick="window.location.href = '#form'">Bewerbung</div>
-      </div>
-    </div>
-      <div id="head">
-        <h3>CubeIndustry</h3>
-      </div>
-    <div id="main">
-      <hr>
-      <p id="contact">Kontakt</p>
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="https://cubeindustry.github.io/cloud/DATA/CubeIndustry/icon_nt.png" alt="icon without text">
+    <h1>CubeIndustry</h1>
+  </header>
+  <div id="nav">
+    <a href="https://cubeindustry.github.io/audio-player">Audio Player</a>
+    <a href="https://cubeindustry.github.io/video-player">Video Player</a>
+    <a href="https://cubeindustry.github.io/link-preview">Link Preview</a>
+    <a href="#contact">Kontaktinfos</a>
+  </div>
+  <div id="opener">
+    <i class="fas fa-chevron-down"></i>
+  </div>
+  <main>
     <div id="links">
-      <div id="discord" class="container" style="display: flex;
-        flex-direction: column;
-        width: 75px;
-        height: 100px;;
-        align-items: center;
-        background-color: #ffffff;
-        border: 3px solid #5865F2;
-        border-radius: 10px;
-        padding: 10px 20px;
-        font-size: 10px;
-        font-family: sans-serif;
-        color: #5865F2;" onclick="window.open('https://discord.gg/GW7tHYQ4')">
-        <img src="dc.png" alt="Discord Image" width="auto" height="40px" style="margin-bottom: 10px;">
-        <p style="color: #5865F2;
-          text-shadow: 0 0 10px #5865F2, 0 0 20px #5865F2, 0 0 30px;"><strong>Discord</strong></p>
-      </div>
-      <div id="minevale" class="container" style="display: flex;
-        flex-direction: column;
-        width: 75px;
-        height: 100px;;
-        align-items: center;
-        background-color: #ffffff;
-        border: 3px solid #13DEA1;
-        border-radius: 10px;
-        padding: 10px 20px;
-        font-size: 10px;
-        font-family: sans-serif;
-        color: #13DEA1;" onclick="window.open('https://www.minevale.de')">
-        <img src="mv.png" alt="Minevale Image" width="auto" height="40px" style="margin-bottom: 10px;">
-        <p style="
-          color: #13DEA1;
-          text-shadow:0 0 10px #14877C"><strong>Minevale</strong></p>
-      </div>
-      <div id="youtube" class="container" style="display: flex;
-        flex-direction: column;
-        width: 75px;
-        height: 100px;;
-        align-items: center;
-        background-color: #ffffff;
-        border: 3px solid #ff0000;
-        border-radius: 10px;
-        padding: 10px 20px;
-        font-size: 10px;
-        font-family: sans-serif;
-        color: #ff0000;" onclick="window.open('https://www.youtube.com/@cube-industry')">
-        <img src="yt.png" alt="YouTube Image" width="auto" height="40px" style="margin-bottom: 10px;">
-        <p style="color: #ff0000;
-          text-shadow: 0 0 10px #ffcccc, 0 0 20px #ffcccc, 0 0 30px;"><strong>YouTube</strong></p>
-      </div>
-      <div id="twitch" class="container" style="display: flex;
-        flex-direction: column;
-        width: 75px;
-        height: 100px;;
-        align-items: center;
-        background-color: #ffffff;
-        border: 3px solid #9146FF;
-        border-radius: 10px;
-        padding: 10px 20px;
-        font-size: 10px;
-        font-family: sans-serif;
-        color: #9146FF;" onclick="window.open('https://www.twitch.tv/cubebuilder_live')">
-        <img src="tv.png" alt="Twitch Image" width="auto" height="40px" style="margin-bottom: 10px;">
-        <p style="color: #9146FF;
-          text-shadow: 0 0 10px #9146FF, 0 0 20px #9146FF, 0 0 30px;"><strong>Twitch</strong></p>
-      </div>
+      Social Media Links:<br><br>
+      <a href="https://discord.gg/h29PY4zJhv">
+        <i class="fas fa-brands fa-discord" id="linkDC"></i>
+        Discord
+      </a>
+      <a href="https://youtube.com/@cube-industry?si=uFNBLqQfmOTQNKzF">
+        <i class="fas fa-brands fa-youtube" id="linkYT"></i>
+        YouTube
+      </a>
+      <a href="https://twitch.tv/cubebuilder_live">
+        <i class="fas fa-brands fa-twitch" id="linkTV"></i>
+        Twitch
+      </a>
     </div>
-      <hr>
-      <p id="services">Service</p>
-      <div id="servicelist">
-        <div id="farmaufträge" class="container" style="display: flex;
-          flex-direction: column;
-          width: 75px;
-          height: 100px;;
-          align-items: center;
-          background-color: #ffffff;
-          border: 3px solid #000000;
-          border-radius: 10px;
-          padding: 10px 20px;
-          font-size: 10px;
-          font-family: sans-serif;
-          color: #000000;">
-          <img src="fa.png" alt="Farmaufträge Image" width="auto" height="40px" style="margin-bottom: 10px;">
-          <p style="color: #000000;
-            text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px;"><strong>Farmaufträge</strong></p>
-        </div>
-        <div id="redstone" class="container" style="display: flex;
-          flex-direction: column;
-          width: 75px;
-          height: 100px;;
-          align-items: center;
-          background-color: #ffffff;
-          border: 3px solid #000000;
-          border-radius: 10px;
-          padding: 10px 20px;
-          font-size: 10px;
-          font-family: sans-serif;
-          color: #000000;">
-          <img src="rs.png" alt=" Image" width="auto" height="40px" style="margin-bottom: 10px;">
-          <p style="color: #000000;
-            text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px;"><strong>Redstone</strong></p>
-        </div>
-        <div id="plotAushöhlen" class="container" style="display: flex;
-          flex-direction: column;
-          width: 75px;
-          height: 100px;;
-          align-items: center;
-          background-color: #ffffff;
-          border: 3px solid #000000;
-          border-radius: 10px;
-          padding: 10px 20px;
-          font-size: 10px;
-          font-family: sans-serif;
-          color: #000000;">
-          <img src="pa.png" alt=" Image" width="auto" height="40px" style="margin-bottom: 10px;">
-          <p style="color: #000000;
-            text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px;"><strong>Plot aushöhlen</strong></p>
-        </div>
-        <div id="kartenBauen" class="container" style="display: flex;
-          flex-direction: column;
-          width: 75px;
-          height: 100px;;
-          align-items: center;
-          background-color: #ffffff;
-          border: 3px solid #000000;
-          border-radius: 10px;
-          padding: 10px 20px;
-          font-size: 10px;
-          font-family: sans-serif;
-          color: #000000;">
-          <img src="kb.png" alt=" Image" width="auto" height="40px" style="margin-bottom: 10px;">
-          <p style="color: #000000;
-            text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px;"><strong>Karten bauen</strong></p>
-        </div>
-      </div>
-      <hr>
-      <p id="form">Bewerbung</p>
-      <div id="bewerbung">
-      <form action="https://formsubmit.co/CubeBuilder@web.de" method="POST" style="font-family: Arial, sans-serif; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 90%; box-sizing: border-box; margin-top: 20px;">
-          <h2 style="color: #000000; text-align: center; margin-bottom: 20px; font-size: 24px;">Bewerbungs Formular</h2>
-
-          <label for="Name" style="display: block; margin-bottom: 8px;">Name *</label>
-          <input type="text" id="Name" name="Name" placeholder="Name *" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"/>
-
-          <label for="Discord-Name" style="display: block; margin-bottom: 8px;">Discord Name *</label>
-          <input type="text" id="Discord-Name" name="Discord-Name" placeholder="Discord Name *" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"/>
-
-          <label for="Minecraft-Name" style="display: block; margin-bottom: 8px;">Minecraft Name *</label>
-          <input type="text" id="Minecraft-Name" name="Minecraft-Name" placeholder="Minecraft Name *" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"/>
-
-          <label for="Email" style="display: block; margin-bottom: 8px;">Email</label>
-          <input type="email" id="Email" name="Email" placeholder="Email" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"/>
-
-          <label for="Alter" style="display: block; margin-bottom: 8px;">Alter *</label>
-          <input type="number" id="Alter" name="Alter" placeholder="Alter *" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"/>
-
-          <label for="playtimeMC" style="display: block; margin-bottom: 8px;">Minecraft Spielzeit in Jahren *</label>
-          <input type="number" id="playtimeMC" name="playtimeMC" placeholder="Minecraft Spielzeit in Jahren *" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"/>
-
-          <label for="playtimeMV" style="display: block; margin-bottom: 8px;">Minevale Spielzeit in Jahren *</label>
-          <input type="number" id="playtimeMV" name="playtimeMV" placeholder="Minevale Spielzeit in Jahren *" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"/>
-
-          <label for="Lieblingsfarbe" style="display: block;font-size: 12px; color: #333; margin-bottom: 8px;">Lieblingsfarbe</label>
-          <input type="color" id="Lieblingsfarbe" name="Lieblingsfarbe" placeholder="Lieblingsfarbe" style="width: 100px; height: 40px; border: 1px solid #ddd; border-radius: 4px;"/><br><br>
-
-          <div style="display: flex; align-items: center; margin-bottom: 15px;">
-              <input type="checkbox" id="Nicht-gescammt" name="Nicht gescammt" value="Nicht gescammt" required style="margin-right: 10px;"/>
-              <label for="Nicht-gescammt" style="font-size: 12px; color: #333; display: flex;">Ich habe noch nicht gescammt. <p style="color: #ff0000; font-size: 12px;">*</p></label>
-          </div>
-
-          <div style="display: flex; align-items: center; margin-bottom: 15px;">
-              <input type="checkbox" id="Vorraussetzungen" name="Vorraussetzungen" value="Vorraussetzungen" required style="margin-right: 10px;"/>
-              <label for="Vorraussetzungen" style="font-size: 12px; color: #333; display: flex;">Ich habe die<a href="https://cubeindustry.github.io/requirements" style="color: #234666; text-decoration: underline; font-size: 12px; margin-left: 5px; margin-right: 5px;">Vorraussetzungen</a>gelesen und bin mit diesen einverstanden. <p style="color: #ff0000; font-size: 12px;">*</p></label>
-          </div>
-
-          <button type="submit" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">Absenden</button>
-      </form>
-      </div>
+    <hr>
+    <div id="services">
+      Services:<br><br>
+      <a href="">
+        <i class="fas fa-hammer" id="linkOD"></i>
+        Farm Aufträge
+      </a>
+      <a href="">
+        <i class="fas fa-tools" id="linkRD"></i>
+        Redstone
+      </a>
+      <a href="">
+        <i class="fas fa-spoon" id="linkPA"></i>
+        Plot Aushöhlen
+      </a>
+      <a href="">
+        <i class="fas fa-image" id="linkKB"></i>
+        Karten Bauen
+      </a>
     </div>
+    <hr>
+    <div id="contact">
+      <h3>Kontaktinfos:</h3>
+      <p>Owner: <a href="https://discord.com/users/1151971830983311441">CubeBuilder</a></p>
+      <p>E-Mail: <a href="mailto:cubebuilder@web.de">cubebuilder@web.de</a></p>
+      <p>Discord Server: <a href="https://discord.gg/h29PY4zJhv">CubeIndustry</a></p>
+      <p>Github: <a href="https://github.com/CubeIndustry">CubeIndustry</a></p>
+    </div>
+    <hr>
+  </main>
+  <script>
+    const nav = document.getElementById('nav');
+    const opener = document.getElementById('opener');
+    const icon = opener ? opener.querySelector('i') : null;
+
+    function toggleNav() {
+      const isOpen = nav.classList.contains('open');
+
+      nav.classList.toggle('open');
+      opener.classList.toggle('open');
+
+      if (isOpen) {
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+      } else {
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+      }
+    }
+
+    opener.addEventListener('click', toggleNav);
+  </script>
+
   </body>
 </html>
