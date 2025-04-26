@@ -25,7 +25,14 @@
       overflow: hidden;
       overflow-y: scroll;
       user-select: none;
+      scrollbar-width: none;        /* für Firefox */
+      -ms-overflow-style: none;     /* für Internet Explorer */
     }
+
+    *::-webkit-scrollbar {
+      display: none;                /* für Chrome, Safari, Edge */
+    }
+
 
     body {
       background-color: dimgray;
