@@ -48,10 +48,9 @@
     }
 
     main {
-      margin: 0 auto;
       margin-top: 50px;
       padding: 20px;
-      width: 90%;
+      width: 100%;
       max-width: 100%;
       height: 100%;
       box-sizing: border-box;
@@ -438,7 +437,7 @@
     font-size: 18px;
   }
   main #home_value img {
-    width: 200px;
+    width: 400px;
   }
   main #home_value h1 {
     font-size: 22px;
