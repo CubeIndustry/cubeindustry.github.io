@@ -449,17 +449,6 @@
    main #home_value #home_info p {
       font-size: 10px;
    }
-   main #home_value #home_info #home_info_morebuttons strong{
-      font-size: 10px;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.5s ease-in-out;
-      margin-left: 10px;
-      margin-right: 10px;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      padding: 5px;
-   }
   main #projects_value #projects_entertainment,
   main #projects_value #projects_games {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -487,6 +476,17 @@
   main #home_value img {
     width: 200px;
   }
+   main #home_value #home_info #home_info_morebuttons strong{
+      font-size: 10px;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+      margin-left: 10px;
+      margin-right: 10px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      padding: 5px;
+   }
   main #projects_value #projects_entertainment,
   main #projects_value #projects_games {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
