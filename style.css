@@ -55,6 +55,7 @@
       box-sizing: border-box;
       display: flex;
       justify-content: center;
+      text-align: center;
       align-items: center;
       overflow-x: auto;
     }
