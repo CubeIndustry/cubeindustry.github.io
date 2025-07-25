@@ -442,6 +442,9 @@
   main #home_value p {
     font-size: 16px;
   }
+   main #home_value #home_info p {
+      font-size: 10px;
+   }
   main #projects_value #projects_entertainment,
   main #projects_value #projects_games {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
