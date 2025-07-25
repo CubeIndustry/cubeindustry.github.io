@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #8C1E1E;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .season-image {
+            width: 350px;
+            margin: 25px;
+            height: auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        #home{
+            position: absolute;
+            bottom: 5%;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            body{
+                flex-direction: column;
+            }
+            .season-image{
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img class="season-image" src="" alt="Season Image">
+    <div>
+    <h1>404</h1>
+    <p id="season-text"></p>
+    </div>
+    <p onclick="window.location.href='https://cubeindustry.github.io/'" id="home">Zurrück zur Startseite</p>
+    <script>
+        const seasonImage = document.querySelector('.season-image');
+        const seasonText = document.getElementById('season-text');
+
+        function getSeason() {
+            const now = new Date();
+            const month = now.getMonth();
+            const date = now.getDate();
+            let season = "default";
+            let imageUrl = "";
+
+
+            if ((month == 11 && date >= 21) || (month >= 0 && month <= 2)) {
+                season = "winter";
+                imageUrl = "https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Pictures/Icons/winter.png";
+                seasonText.textContent = "Es ist kalt hier, und die Seite, die du suchst, scheint eingefroren zu sein.";
+            }
+
+            else if ((month == 2 && date >= 20) || (month >= 3 && month <= 5)) {
+                season = "spring";
+                imageUrl = "https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Pictures/Icons/spring.png";
+                seasonText.textContent = "Die Natur erwacht, doch diese Seite schläft noch. Komm später wieder, wenn sie erwacht.";
+            }
+
+            else if ((month == 5 && date >= 21) || (month >= 6 && month <= 8)) {
+                season = "summer";
+                imageUrl = "https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Pictures/Icons/summer.png";
+                seasonText.textContent = "Sonne, Strand und Meer… und diese Seite? Leider nicht zu finden.";
+            }
+
+            else {
+                season = "autumn";
+                imageUrl = "https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Pictures/Icons/autumn.png";
+                seasonText.textContent = "Die Blätter fallen, der Wind weht, aber diese Seite bleibt liegen.";
+            }
+
+
+            const dayOfYear = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
+
+            if ((month == 11 && (date >= 24 && date <= 25)) || (month == 11 && date == 31)) {
+                if (date == 24 || date == 25) {
+                    seasonText.textContent = "Ho Ho Ho! Die Seite, die du suchst, hat sich wohl unter dem Weihnachtsbaum versteckt. Frohe Weihnachten!";
+                    imageUrl = "https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Pictures/Icons/christmas.png";
+                } else {
+                    seasonText.textContent = "Feuerwerk und Champagner, aber diese Seite ist nicht da. Frohes neues Jahr!";
+                    imageUrl = "https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Pictures/Icons/newyear.png";
+                }
+            }
+            else if ((month == 3 && date >= 1 && date <= 7)) {
+                seasonText.textContent = "Der Osterhase hat sich wohl diese Seite nicht ausgesucht. Aber keine Sorge, die Jagd nach Ostereiern geht weiter!";
+                imageUrl = "https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Pictures/Icons/easter.png";
+            }
+
+            else if (month == 9 && date == 31) {
+                seasonText.textContent = "Süßes oder Saures? Diese Seite hast du leider nicht gefunden, aber vielleicht ein paar Süßigkeiten!";
+                imageUrl = "https://cubeindustry.github.io/cloud/DATA/CubeIndustry/Pictures/Icons/halloween.png";
+            }
+
+            seasonImage.src = imageUrl;
+        }
+
+        getSeason();
+    </script>
+</body>
+</html>
