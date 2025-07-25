@@ -434,7 +434,7 @@
 
 @media screen and (max-width: 768px) {
   body nav .nav-left #logo {
-    font-size: 18px;
+    font-size: 10px;
   }
   main #home_value img {
     width: 400px;
