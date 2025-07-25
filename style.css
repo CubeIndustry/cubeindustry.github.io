@@ -471,10 +471,10 @@
     font-size: 18px;
   }
   main #home_value p {
-    font-size: 14px;
+    font-size: 10px;
   }
   main #home_value img {
-    width: 100%;
+    width:80%;
   }
   main #projects_value #projects_entertainment,
   main #projects_value #projects_games {
