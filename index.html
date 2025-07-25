@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CubeIndustry</title>
+  <link rel="icon" type="image/png" href="https://cubeindustry.github.io/icon.ico">
+  <link rel="apple-touch-icon" type="image/png" href="https://cubeindustry.github.io/icon.ico">
+  <link href="https://fonts.cdnfonts.com/css/adlam-display" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cubeindustry.github.io/style.css">
+</head>
+
+<body>
+  <nav id="nav">
+    <div class="nav-left">
+      <strong id="logo" onclick="window.location.reload()">CUBEINDUSTRY</strong>
+    </div>
+    <div class="nav-right">
+      <strong id="home" onclick="window.location.reload()">HOME</strong>
+      <strong id="projects" onclick="changeTab('projects')">PROJECTS</strong>
+      <strong id="socials" onclick="changeTab('socials')">SOCIALS</strong>
+      <strong id="application" onclick="changeTab('application')">APPLICATION</strong>
+    </div>
+  </nav>
+  <main>
+    <div id="home_value">
+      <div id="home_value_screen">
+        <img src="https://cubeindustry.github.io/icon.ico" alt="CubeIndustry Logo" id="logo">
+        <h1>CubeIndustry</h1>
+      </div>
+      <div id="home_info">
+        <div id="home_info_text">
+          <h2>What is CubeIndustry?</h2>
+          <p>Wir bei CubeIndustry sind ein Team aus kreativen Köpfen und Entwicklern, die digitale Projekte, Spiele und nützliche Anwendungen umsetzen. Neben eigenen Arbeiten bieten wir auch spezialisierte Dienstleistungen im Bereich Minecraft an, insbesondere für Redstone und technische Konstruktionen. Dabei verbinden wir technische Expertise mit Leidenschaft für kreative Herausforderungen und schaffen individuelle Ergebnisse und spannende Erlebnisse sowohl in der digitalen Welt als auch darüber hinaus.</p>
+          <div id="home_info_morebuttons">
+            <strong id="more_projects" onclick="changeTab('projects')">PROJECTS</strong>
+            <strong id="more_socials" onclick="changeTab('socials')">SOCIALS</strong>
+            <strong id="more_application" onclick="changeTab('application')">APPLICATION</strong>
+          </div>
+        </div>
+      </div>
+      <div id="home_server">
+        <div id="server_minevale">
+          <img src="https://www.minevale.de/favicon.ico" alt="Minevale Logo" class="server_logo">
+          <strong>MineVale</strong>
+          <p>Website: <a href="https://www.minevale.de">Minevale.de</a></p>
+          <p>Discord: <a href="https://discord.minevale.de/">discord.minevale.de</a></p>
+          <p>IP: minevale.de</p>
+        </div>
+        <div id="server_cubeindustry">
+          <img src="https://cubeindustry.github.io/icon.ico" alt="CubeIndustry Logo" class="server_logo">
+          <strong>CubeIndustry</strong>
+          <p>Website: <a href="https://cubeindustry.github.io">CubeIndustry.github.io</a></p>
+          <p>Discord: <a href=""></a></p>
+          <p>IP: </p>
+        </div>
+      </div>
+    </div>
+    <div id="projects_value" style="display: none;">
+      <div id="projects_entertainment_container">
+        <h2>Unterhaltung</h2>
+        <div id="projects_entertainment">
+          <div id="projects_entertainment_audio-player">
+            <img src="https://cubeindustry.github.io/icon.ico" alt="Audio Player Logo" class="project_logo">
+            <strong>Audio Player</strong>
+            <p>Höre deine Musik ohne Werbeunterbrechungen und komplett kostenlos.</p>
+            <p>Link: <a
+                href="https://cubeindustry.github.io/audio-player">https://cubeIndustry.github.io/audio-player/</a></p>
+          </div>
+          <div id="projects_entertainment_video-player">
+            <img src="https://cubeindustry.github.io/icon.ico" alt="Video Player Logo" class="project_logo">
+            <strong>Video Player</strong>
+            <p>Schaue deine Aufnahmen und Videos ohne Werbung und komplett kostenlos an.</p>
+            <p>Link: <a
+                href="https://cubeindustry.github.io/video-player">https://cubeIndustry.github.io/video-player/</a></p>
+          </div>
+          <div id="projects_entertainment_link-preview">
+            <img src="https://cubeindustry.github.io/icon.ico" alt="Link Preview Logo" class="project_logo">
+            <strong>Link Preview</strong>
+            <p>Du weißt nicht, ob du einem Link trauen kannst? Mit unserer Linkpreview kannst du deinen Link überprüfen
+              und ohne Risiken die Website prüfen. (Downloads ausgeschlossen)</p>
+            <p>Link: <a
+                href="https://cubeindustry.github.io/link-preview">https://cubeIndustry.github.io/link-preview/</a></p>
+          </div>
+          <div id="projects_entertainment_coming-soon">
+            <img src="" alt="Coming Soon Logo" class="project_logo">
+            <strong>Coming Soon</strong>
+            <p>description</p>
+            <p>Link: <a href=""></a></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="projects_games_container">
+        <h2>Spiele</h2>
+        <div id="projects_games">
+          <div id="projects_games_dawnforge">
+            <img src="" alt="DawnForge Logo" class="project_logo">
+            <strong>DawnForge</strong>
+            <p>description</p>
+            <p>Link: <a href=""></a></p>
+          </div>
+          <div id="projects_games_dayx">
+            <img src="" alt="DayX Logo" class="project_logo">
+            <strong>DayX</strong>
+            <p>description</p>
+            <p>Link: <a href=""></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div id="socials_value" style="display: none;">
+      <div id="socials_discord">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord Logo" class="social_logo">
+        <strong>Discord</strong>
+        <p>Link: <a href="https://discord.com/channels/1248732382010278059/1248735731946618932">Discord</a></p>
+      </div>
+      <div id="socials_github">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub Logo" class="social_logo">
+        <strong>GitHub</strong>
+        <p>Link: <a href="https://github.com/CubeIndustry">GitHub</a></p>
+      </div>
+      <div id="socials_youtube">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube Logo"
+          class="social_logo">
+        <strong>YouTube</strong>
+        <p>Link: <a href="">-</a></p>
+      </div>
+    </div>
+    <div id="application_value" style="display: none;">
+      <div id="application_choose_application">
+        <h2>What would you like to apply for?</h2>
+        <strong id="application_choose_member" onclick="chooseApplication('member')">Mitglied</strong>
+        <strong id="application_choose_supporter" onclick="chooseApplication('supporter')">Supporter</strong>
+      </div>
+      <div id="application_member_choose_way" style="display: none;">
+        <h2>How would you like to apply? mem</h2>
+        <strong id="application_member_choose_way_discord" onclick="chooseWay('member', 'discord')">via Discord</strong>
+        <strong id="application_member_choose_way_document" onclick="chooseWay('member', 'document')">via
+          Document</strong>
+      </div>
+      <div id="application_supporter_choose_way" style="display: none;">
+        <h2>How would you like to apply? sup</h2>
+        <strong id="application_supporter_choose_way_discord" onclick="chooseWay('supporter', 'discord')">via
+          Discord</strong>
+        <strong id="application_supporter_choose_way_document" onclick="chooseWay('supporter', 'document')">via
+          Document</strong>
+      </div>
+      <div id="application_member_document" style="display: none;">
+        <form action="https://formsubmit.co/CubeBuilder@web.de" method="POST">
+          <h2>Bewerbungsformular (Mitglied)</h2>
+          <input type="hidden" value="member" name="Mitglied">
+          <input type="text" name="name" id="mname" placeholder="Name" required>
+          <input type="number" name="age" id="mage" placeholder="Alter" required>
+          <input type="text" name="discord" id="mdiscord" placeholder="Discord Name" required>
+          <input type="email" name="email" placeholder="Email Address">
+          <textarea type="text" name="why" id="mwhy" class="awhy" placeholder="Warum möchtest du Mitglied werden?"
+            required></textarea>
+          <div class="checkbox_line">
+            <input type="checkbox" name="accept" id="maccept_agb" required />
+            <label for="maccept_agb">Ich habe die <a href="https://cubeindustry.github.io/agb">AGB</a>'s gelesen und akzeptiere diese.</label>
+          </div>
+          <div class="checkbox_line">
+            <input type="checkbox" name="accept" id="maccept_privacy" required />
+            <label for="maccept_privacy">Ich habe die <a href="https://cubeindustry.github.io/privacy">Datenschutzrichtlinien</a> gelesen und akzeptiere
+              diese.</label>
+          </div>
+          <div class="checkbox_line">
+            <input type="checkbox" name="accept" id="maccept_requirements" required />
+            <label for="maccept_requirements">Ich habe mir die <a href="https://cubeindustry.github.io/requirements">Vorraussetzungen</a> durchgelesen und
+              bestätige, dass ich ALLE erfülle.</label>
+          </div>
+          <input type="hidden" name="_autoresponse"
+            value="Your application has been sent! We will contact you as soon as possible.">
+          <input type="hidden" name="_next" value="https://cubeindustry.github.io/">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="submit" value="Absenden" class="send">
+        </form>
+      </div>
+      <div id="application_supporter_document" style="display: none;">
+        <form action="https://formsubmit.co/CubeBuilder@web.de" method="POST">
+          <h2>Bewerbungsformular (Supporter)</h2>
+          <input type="hidden" value="supporter" name="Supporter">
+          <input type="text" name="name" id="sname" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email Address">
+          <div class="checkbox_line">
+            <input type="checkbox" name="confirm" id="sconfirmage" required>
+            <label for="sconfirmage">Ich erfülle das Mindestalter von 13 Jahren.</label>
+          </div>
+
+          <input type="number" name="time" id="stime" placeholder="Wie lange bin ich bereits Mitglied?" required>
+          <textarea type="text" name="why" id="swhy" class="awhy" placeholder="Warum möchtest du Supporter werden?"
+            required></textarea>
+          <input type="hidden" name="_autoresponse"
+            value="Your application has been sent! We will contact you as soon as possible.">
+          <input type="hidden" name="_next" value="https://cubeindustry.github.io/">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="submit" value="Absenden" class="send">
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div id="footer_top">
+      <div id="footer_links">
+        <h3>ABOUT</h3>
+        <strong id="footer_links_projects" onclick="changeTab('projects')">PROJECTS</strong>
+        <strong id="footer_links_socials" onclick="changeTab('socials')">SOCIALS</strong>
+        <strong id="footer_links_application" onclick="changeTab('application')">APPLICATION</strong>
+      </div>
+      <div id="footer_community">
+        <h3>COMMUNITY</h3>
+        <strong id="footer_community_discord"
+          onclick="window.location.href = 'https://discord.com/channels/1248732382010278059/1248735731946618932'">DISCORD</strong>
+        <strong id="footer_community_github"
+          onclick="window.location.href = 'https://github.com/CubeIndustry'">GITHUB</strong>
+        <strong id="footer_community_youtube">-</strong>
+      </div>
+      <div id="toTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        <strong>Top</strong>
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    </div>
+    <div id="footer_bottom">
+      <p>© 2023 CubeIndustry</p>
+    </div>
+  </footer>
+  <script src="https://cubeindustry.github.io/script.js"></script>
+</body>
+
+</html>
