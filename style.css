@@ -372,7 +372,7 @@
       padding: 5px;
     }
 
-    footer #footer_top #footer_community {
+    footer #footer_top #footer_community, footer #footer_top #footer_legal {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -380,7 +380,7 @@
       flex-direction: column;
     }
 
-    footer #footer_top #footer_community strong {
+    footer #footer_top #footer_community strong, footer #footer_top #footer_legal strong {
       font-size: 10px;
       color: #fff;
       cursor: pointer;
