@@ -159,6 +159,9 @@
       border-radius: 5px;
       color: #000;
     }
+    main #application_value #application_choose_application p{
+      color: red;
+   }
 
     main #application_value form {
       display: flex;
@@ -333,6 +336,7 @@
       text-decoration: underline;
       word-break: break-all
     }
+
     footer {
       width: 100%;
       box-sizing: border-box;
