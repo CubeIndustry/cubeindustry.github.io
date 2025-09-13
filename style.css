@@ -161,6 +161,8 @@
     }
     main #application_value #application_choose_application p{
       color: red;
+      background: white;
+      padding: 10px;
    }
 
     main #application_value form {
