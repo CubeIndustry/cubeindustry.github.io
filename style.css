@@ -144,6 +144,7 @@
 
     main #home_value #home_server a {
       text-decoration: none;
+       color: #fff;
     }
 
     main #application_value form,
